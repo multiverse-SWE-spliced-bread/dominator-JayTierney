@@ -16,7 +16,8 @@ lButton.addEventListener('click', upperCase)
 function upperCase(u){
     para.innerText = txt.toUpperCase()
 }
-
 sButton.addEventListener('click', sarcCase)
 
-function sarcCase(s)
+function sarcCase(s){
+    para.innerText = txt.split("").map((c,i) => i % 2 == 0 ? c.toLowerCase() : c.toUpperCase()).join("")
+}
